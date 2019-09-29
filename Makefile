@@ -3,7 +3,7 @@ all:
 	make pdf
 
 pdf:
-	pdflatex report.tex
+	latexmk main.tex
 
 clean:
 	rm -f *.aux
