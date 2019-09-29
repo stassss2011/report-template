@@ -1,22 +1,10 @@
-\include{settings}
-
-\begin{document}	% начало документа
-
-% Титульная страница
-\include{titlepage}
-
-% Содержание
-\include{ToC}
-
-
-\section{Цель работы}
-
+\section*{Постановка задачи}
+Необходимо сделать нормальный шаблон для отчётов в Политехе. Структура отчётов может быть разной, зависит от требования преподавателя, поэтому файл content.tex отдельно выделен от всех других в шаблоне и не делится на подчасти.
+\addcontentsline{toc}{section}{Постановка задачи}
 
 \section{Программа работы}
 
-
 \section{Теоретическая информация}
-
 
 \section{Ход выполнения работы}
 
@@ -38,34 +26,12 @@
 	\end{center}
 \end{figure}
 
-
-\subsection{Листинг}
-
-\lstinputlisting[
-	label=code:hello,
-	caption={hell\_o.c},% для печати символ '_' требует выходной символ '\'
-]{hell_o.c}
-\parindent=1cm % командна \lstinputlisting сбивает параментры отступа
 Текст без отступа (следует за вставкой)
 
 Новый параграф
 
 \noindent Новый параграф с принудительно выключенным отступом
 
-
-\subsection{Частичный листинг}
-% настрока частичного ввода (требуется один раз)
-\makeatletter
-\def\lst@PlaceNumber{\llap{\normalfont
-                \lst@numberstyle{\the\lst@lineno}\kern\lst@numbersep}}
-\makeatother
-
-\lstinputlisting[
-	label=code:hello_mod,
-	linerange={4-5},
-	caption={фрагмент hell\_o.c},
-]{hell_o.c}
-\parindent=1cm
 
 \subsection{Таблица}
 
@@ -81,8 +47,24 @@
 	\end{center}
 \end{table}
 
-\section{Выводы}
+\begin{landscape}
+\subsection{Поворот страницы}
+Поворачиваем страницу, потому что можем.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=26.5cm]{diagram}
+    \caption{Да.}
+\end{figure}
+\end{landscape}
+
+\subsection{Листинг}
+\begin{code}
+    \inputminted[breaklines=true, xleftmargin=1em,linenos, frame=single, framesep=10pt, firstline=1, lastline=33]{haskell}{listings/Parser.hs}
+    \caption{Parser.hs --- функциональный код в массы!}
+\end{code}
+
+\section*{Заключение}
 \LaTeX\ удобен для создания отчётов, так как сам следит за нумерацией таблиц, рисунков, листингов и отсылок к ним (так, например, здесь всегда будет указан номер рисунка "sample" не зависимо от того, какой он (1,2 или другой) - это рисунок \ref{pic:pic_name}). Не менее важно что весь документ оформлен в едином стиле, а исходные материалы подключаются к отчёту, а не хранятся в нём. Всё это позволяет легко получить качественный отчёт без дополнительных трат на его офрмление.
 
 Исключения, пожалуй, составляют таблицы, так как их значительно сложнее создавать кодом, нежели в графическом редакторе. Но здесь никто не запрещает использовать визуальные средства создания таблиц для \LaTeX\ .
-\end{document}
+\addcontentsline{toc}{section}{Заключение}
