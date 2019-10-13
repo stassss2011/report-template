@@ -4,7 +4,7 @@ sudo: true
 install:
   - sudo apt-get install latexmk
   - sudo pip install pygments
-  - tlmgr install polyglossia minted
+  - tlmgr install polyglossia minted fvextra
 
 script: 
   - latexmk -interaction=nonstopmode main.tex
