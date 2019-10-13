@@ -1,15 +1,20 @@
-% перечень использованных источников
-\addbibresource{refs.bib}
+% настройки polyglossia
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
 
 % локализация
-\graphicspath{ {} }
 \addto\captionsrussian{
+  \renewcommand{\figurename}{Рисунок}%
   \renewcommand{\partname}{Глава}
-  \renewcommand{\contentsname}{Содержание}
-  \renewcommand{\refname}{Перечень использованных источников}
-  \renewcommand{\bibname}{Перечень использованных источников}
-  \renewcommand{\listingscaption}{Программа}
+  \renewcommand{\contentsname}{\centerline{Содержание}}
+  \renewcommand{\listingscaption}{Листинг}
 }
+
+% основной шрифт документа
+\setmainfont{CMU Serif}
+
+% перечень использованных источников
+\addbibresource{refs.bib}
 
 % настройка полей
 \geometry{top=2cm}
@@ -28,13 +33,16 @@
     pdfkeywords={\subject}
 }
 
-% настройка подсветки кода и окружения для minted
-\usemintedstyle{manni}
+% настройка подсветки кода и окружения для листингов
+\usemintedstyle{colorful}
 \newenvironment{code}{\captionsetup{type=listing}}{}
 
+% шрифт для листингов с лигатурами
+\setmonofont{[FiraCode-Regular.otf]}[
+  Contextuals=Alternate  % Activate the calt feature
+]
 
 % оформления подписи рисунка
-\addto\captionsrussian{\renewcommand{\figurename}{Рисунок}}
 \captionsetup[figure]{labelsep = period}
 
 % подпись таблицы
