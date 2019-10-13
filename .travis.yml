@@ -3,7 +3,7 @@ sudo: true
 
 install:
   - sudo apt-get install latexmk
-  - pip install pygments
+  - sudo pip install pygments
   - tlmgr install polyglossia minted
 
 script: 
