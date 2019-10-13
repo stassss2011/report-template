@@ -1,10 +1,8 @@
-language: r
+dist: bionic
 sudo: true
 
 install:
-  - sudo apt-get install latexmk
-  - sudo pip install pygments
-  - tlmgr install polyglossia minted fvextra ifplatform lstfiracode chngcntr
+ - sudo apt-get install texlive-full
 
 script: 
   - latexmk -interaction=nonstopmode main.tex
