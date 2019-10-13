@@ -3,7 +3,7 @@ all:
 	make pdf
 
 pdf:
-	latexmk main.tex
+	latexmk -interaction=nonstopmode main.tex
 
 clean:
 	rm -f *.aux
