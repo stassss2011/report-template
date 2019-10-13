@@ -3,7 +3,8 @@ sudo: true
 
 install:
   - sudo apt-get install latexmk
-  - tlmgr install polyglossia
+  - pip install pygments
+  - tlmgr install polyglossia minted
 
 script: 
   - latexmk -interaction=nonstopmode main.tex
