@@ -3,6 +3,7 @@ sudo: true
 
 install:
   - sudo apt-get install latexmk
+  - tlmgr install polyglossia
 
 script: 
   - latexmk -interaction=nonstopmode main.tex
