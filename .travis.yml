@@ -2,7 +2,7 @@ dist: bionic
 sudo: true
 
 install:
- - sudo apt-get install texlive-full
+  - sudo apt install texlive-full
 
 script: 
   - latexmk -interaction=nonstopmode main.tex
