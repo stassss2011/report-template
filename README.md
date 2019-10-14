@@ -9,7 +9,7 @@
 ## Работа с шаблоном
 Рекомендуется использовать Overleaf. 
 В таком случае не придётся устанавливать пакеты TeX локально и разбираться в сборке документа вручную. 
-Использовать шаблон из галереи шаблонов Overleaf: [https://www.overleaf.com/latex/templates/shablon-priezientatsii-spbpu/pyxygrcntcgs](https://www.overleaf.com/latex/templates/shablon-priezientatsii-spbpu/pyxygrcntcgs)
+Использовать шаблон из галереи шаблонов Overleaf: [https://www.overleaf.com/latex/templates/shablon-otchiota-spbpu/jzbtjhbjpfxg](https://www.overleaf.com/latex/templates/shablon-otchiota-spbpu/jzbtjhbjpfxg)
 
 #### Сборка локально
 Понадобится Docker. 
