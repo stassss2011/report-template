@@ -3,7 +3,7 @@ dist: trusty # Ubuntu 14.04
 services: docker # Enables docker
 
 script: 
-  - ./latexdockercmd.sh latexmk -cd -f -interaction=batchmode -pdf main.tex
+  - ./latex_docker.sh latexmk -cd -f -interaction=batchmode -pdf main.tex
   - mv main.pdf report-template.pdf
 deploy:
   provider: releases
