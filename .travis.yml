@@ -1,11 +1,9 @@
 sudo: required
-dist: trusty # Ubuntu 14.04
-services: docker # Enables docker
+dist: trusty
+services: docker
 
 script: 
-  - wget https://raw.githubusercontent.com/iamm-templates/latex-docker/master/Dockerfile -O Dockerfile
   - wget https://github.com/iamm-templates/latex-docker/raw/master/latexdockercmd.sh -O latexdockercmd.sh
-  - docker build -t iamm-templates/image .
   - chmod a+x latexdockercmd.sh
   - ./latexdockercmd.sh latexmk -cd -f -interaction=batchmode -pdf main.tex
   - mv main.pdf report-template.pdf
