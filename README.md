@@ -1,13 +1,23 @@
+# Шаблон отчёта (СПбПУ) [![Build Status](https://travis-ci.org/iamm-templates/report-template.svg?branch=master)](https://travis-ci.org/iamm-templates/report-template)
 В этом проекте представлен шаблон отчёта по лабораторной или курсовой работе. Это форк https://github.com/kspt-templates/report, переделанный под меня. Может, и Вам будет удобнее.
-
 
 **Важно!** Шаблон не идеален и соответствует не всем требованиям.
 Если консультант по нормконтролю или преподаватель высказал замечания к работе, составленной по данному шаблону, то можно смело [заводить issue](https://github.com/tiulpin/report-template/issues/new). Попробуем исправить.
 
 Также можно отправлять Pull Request. 
+
 ## Работа с шаблоном
-Рекомендуется использовать [Overleaf](https://www.ru.overleaf.com/). 
-В таком случае не придётся устанавливать пакеты TeX локально и разбираться в сборке документа вручную. Данный шаблон в скором времени будет опубликован в галерее шаблонов Overleaf.
+Рекомендуется использовать Overleaf. 
+В таком случае не придётся устанавливать пакеты TeX локально и разбираться в сборке документа вручную. 
+Использовать шаблон из галереи шаблонов Overleaf: [https://www.overleaf.com/latex/templates/shablon-priezientatsii-spbpu/pyxygrcntcgs](https://www.overleaf.com/latex/templates/shablon-priezientatsii-spbpu/pyxygrcntcgs)
+
+#### Сборка локально
+Понадобится Docker. 
+```
+wget https://github.com/iamm-templates/latex-docker/raw/master/latexdockercmd.sh -O latexdockercmd.sh
+chmod a+x latexdockercmd.sh
+./latexdockercmd.sh latexmk -cd -f -interaction=batchmode -pdf main.tex
+```
 
 ## Заполнение шаблона
 
