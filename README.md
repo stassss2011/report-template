@@ -9,14 +9,15 @@
 ## Работа с шаблоном
 Рекомендуется использовать Overleaf. 
 В таком случае не придётся устанавливать пакеты TeX локально и разбираться в сборке документа вручную. 
-Использовать шаблон из галереи шаблонов Overleaf: [https://www.overleaf.com/latex/templates/shablon-otchiota-spbpu/jzbtjhbjpfxg](https://www.overleaf.com/latex/templates/shablon-otchiota-spbpu/jzbtjhbjpfxg)
+Использовать шаблон из галереи шаблонов Overleaf: [https://ru.overleaf.com/latex/templates/shablon-otchiota-spbpu/jzbtjhbjpfxg](https://ru.overleaf.com/latex/templates/shablon-otchiota-spbpu/jzbtjhbjpfxg)
 
 #### Сборка локально
 Понадобится Docker. 
 ```
+wget https://github.com/tiulpin/xelatex-docker/raw/master/.latexmkrc -O .latexmkrc
 wget https://github.com/tiulpin/xelatex-docker/raw/master/latexdockercmd.sh -O latexdockercmd.sh
 chmod a+x latexdockercmd.sh
-./latexdockercmd.sh latexmk -cd -f -interaction=batchmode -pdf main.tex
+./latexdockercmd.sh latexmk -cd -f -interaction=nonstopmode -pdf main.tex
 ```
 
 ## Заполнение шаблона
