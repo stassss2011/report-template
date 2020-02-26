@@ -12,6 +12,7 @@
 
 % основной шрифт документа
 \setmainfont{CMU Serif}
+\newfontfamily\cyrillicfont{CMU Serif}[Script=Cyrillic]
 
 % перечень использованных источников
 \addbibresource{refs.bib}
@@ -39,6 +40,7 @@
 
 % шрифт для листингов с лигатурами
 \setmonofont{FiraCode-Regular.otf}[
+    SizeFeatures={Size=10},
     Path = templates/,
     Contextuals=Alternate
 ]
