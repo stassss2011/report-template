@@ -1,6 +1,6 @@
-laungage: python
+language: ruby
 os: linux
-root: required
+sudo: required
 dist: trusty
 services: docker
 branches:
@@ -17,6 +17,5 @@ deploy:
   token: 
     secure: "${GH_TOKEN}"
   file: "report-template.pdf"
-  skip_cleanup: true
   on:
     repo: stassss2011/report-template
