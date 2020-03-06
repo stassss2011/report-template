@@ -1,6 +1,7 @@
 
 # Created by https://www.gitignore.io/api/latex
-
+.latexmkrc
+latexdockercmd.sh
 ### LaTeX ###
 *.acn
 *.acr
