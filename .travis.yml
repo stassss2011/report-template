@@ -1,4 +1,6 @@
-sudo: required
+laungage: python
+os: linux
+root: required
 dist: trusty
 services: docker
 branches:
@@ -12,9 +14,9 @@ script:
   - mv main.pdf report-template.pdf
 deploy:
   provider: releases
-  api_key: 
+  token: 
     secure: "${GH_TOKEN}"
   file: "report-template.pdf"
   skip_cleanup: true
   on:
-    repo: iamm-templates/report-template
+    repo: stassss2011/report-template
